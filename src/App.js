@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import TodoForm from "./components/TodoForm";
 
 function App() {
+  const handleTodoFormSubmit = (values) => {
+    console.log("Form submit ne:", values);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React hooks form</h1>
+      <TodoForm onSubmit={handleTodoFormSubmit} />
     </div>
   );
 }
